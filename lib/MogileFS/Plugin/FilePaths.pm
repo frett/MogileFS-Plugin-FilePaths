@@ -23,7 +23,7 @@ sub _parse_path {
     my $fullpath = shift;
     return unless defined($fullpath) and length($fullpath);
     my ($path, $file) = $fullpath =~
-        m!^(/(?:[\w\-\.]+/)*)([\w\-\.]+)$!;
+        m!^(/(?:[^/]+/)*)([^/]+)$!;
     return ($path, $file);
 }
 
